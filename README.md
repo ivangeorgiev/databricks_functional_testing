@@ -1,4 +1,4 @@
-# Functional Testing for Databricks notebooks
+# Functional testing for databricks notebooks
 
 To be able to test a notebook, it needs to be testable. A simple way to achieve this is to pass parameters which define input and output of the notebook. To execute the test cases and perform assertions, a separate notebook can be used.
 
@@ -80,11 +80,11 @@ runner.run(suite)
 
 Functional test notebooks can be integrated into CI/CD pipelines and executed automatically.
 
-## How to use?
+## How and when to use?
 
 Illustrated approach can be used efficiently for notebook functional testing. Notebooks themselves are not great way to engineer software. For big projects it is recommended to follow good software development practices and package your code in modules and execute them directly as Databricks jobs. The modules should be unit tested using frameworks like `pytest`, `unittest` etc.
 
-Notebooks still can used, but they should be short and should be used to glue the boundaries between input, processing and output. These notebooks can be tested with the described approach.
+Notebooks still can used, but they should be short with only responsibility to orchestrate the data flow - glue the boundaries between input, processing and output. These notebooks can be tested with the described approach.
 
 
 
