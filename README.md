@@ -70,6 +70,16 @@ class TestLoadMovies(unittest.TestCase):
 
 
 
+`unittest` provides simple execution approach which is compatible with Databricks notebooks.
+
+```python
+suite = unittest.TestLoader().loadTestsFromTestCase(TestLoadMovies)
+runner = unittest.TextTestRunner(verbosity=2)
+runner.run(suite)
+```
+
+Functional test notebooks can be integrated into CI/CD pipelines and executed automatically.
+
 ## How to use?
 
 Illustrated approach can be used efficiently for notebook functional testing. Notebooks themselves are not great way to engineer software. For big projects it is recommended to follow good software development practices and package your code in modules and execute them directly as Databricks jobs. The modules should be unit tested using frameworks like `pytest`, `unittest` etc.
