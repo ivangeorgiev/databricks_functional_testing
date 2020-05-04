@@ -1,4 +1,4 @@
-# Compare Datasets
+# Test Spark DataFrames are equal
 
 Almost every test scenario includes equality test. Spark DataFrame doesn't support equality operation. `unittest` framework also doesn't support `assertEqual`  for Spark DataFrame.
 
@@ -54,9 +54,11 @@ test_case = unittest.TestCase()
 test_case.assertEqual(expect, movies_list_sorted)
 ```
 
+## Remarks
 
+Described technique is used in the [unittest-pyspark](https://github.com/ivangeorgiev/unittest-pyspark) python [package](https://pypi.org/project/unittest-pyspark/).
 
-## Notesbooks
+## Notebooks
 
 * The [as_list](as_list.ipynb) notebook contains the definition of the `as_list` function.
 * The [test_as_list](test_as_list.ipynb) contains unit test case for testing the `as_list` function.
