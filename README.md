@@ -86,5 +86,7 @@ Illustrated approach can be used efficiently for notebook functional testing. No
 
 Notebooks still can used, but they should be short with only responsibility to orchestrate the data flow - glue the boundaries between input, processing and output. These notebooks can be tested with the described approach.
 
+## What's next?
 
+Almost every test scenario requires to verify that actually produced dataset is equal to the exepected dataset. Here is a useful technique which helps to [test two Spark DataFrames are equal](datasets_equal/).
 
